@@ -1,0 +1,31 @@
+<body>
+
+	<form id="blogForm" action="/submitBlog" method="post" enctype="multipart/form-data">
+		<br>
+		<input type="text" name="Author Name" required>
+		<br> Place:
+		<br>
+		<input type="text" name="Place" required>
+		<br> Title:
+		<br>
+		<input type="text" name="Blog Title" required>
+		<br> Blog Image:
+		<br>
+		<input type="file" name="Blog Image" accept="image/*" required>
+		<br>Image Alt:
+		<br>
+		<input type="text" name="Image Alt" required>
+		<br> Created On:
+		<br>
+		<input type="text" name="Created On" required>
+		<br> Blog Id:
+		<br>
+		<input type="text" name="Blog Id" required>
+		<br> Author Img:
+		<br>
+		<input type="file" name="Author Img" accept="image/*" required>
+		<br>
+		<button type="submit" form="blogForm" value="Submit">Upload Blog</button>
+	</form>
+
+</body>

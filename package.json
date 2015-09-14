@@ -14,5 +14,10 @@
   "license": "BSD-2-Clause",
   "bugs": {
     "url": "https://github.com/vikas23/blog_node/issues"
+  },
+  "dependencies": {
+    "express": "~4.13.3",
+    "express-handlebars": "~2.0.1",
+    "connect-multiparty": "~2.0.0"
   }
 }
