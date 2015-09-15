@@ -1,31 +1,36 @@
 <body>
 
 	<form id="blogForm" action="/submitBlog" method="post" enctype="multipart/form-data">
+		<br> Author Name:
 		<br>
-		<input type="text" name="Author Name" required>
+		<input type="text" name="author" required>
 		<br> Place:
 		<br>
 		<input type="text" name="Place" required>
 		<br> Title:
 		<br>
-		<input type="text" name="Blog Title" required>
+		<input type="text" name="title" required>
 		<br> Blog Image:
 		<br>
-		<input type="file" name="Blog Image" accept="image/*" required>
-		<br>Image Alt:
+		<input type="file" name="imgsrc" accept="image/*" required>
+		<br> Image Alt:
 		<br>
-		<input type="text" name="Image Alt" required>
+		<input type="text" name="imgAlt" required>
 		<br> Created On:
 		<br>
-		<input type="text" name="Created On" required>
+		<input type="text" name="created" required>
 		<br> Blog Id:
 		<br>
-		<input type="text" name="Blog Id" required>
+		<input type="text" name="id" required>
 		<br> Author Img:
 		<br>
-		<input type="file" name="Author Img" accept="image/*" required>
+		<input type="file" name="authorImg" accept="image/*" required>
+		<br> Upload Blog:
 		<br>
-		<button type="submit" form="blogForm" value="Submit">Upload Blog</button>
+		<input type="file" name="Upload_Blog" accept=".md" required>
+		<br>
+		<br>
+		<button type="submit" form="blogForm" value="Submit">Submit Blog</button>
 	</form>
 
 </body>
