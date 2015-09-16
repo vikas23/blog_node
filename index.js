@@ -108,6 +108,7 @@ app.post('/submitBlog', multipartMiddleware, function (req, res) {
 
 	// Deleting temp files
 	rmDir('./uploads');
+	res.render('success');
 });
 
 // custom 404 page
