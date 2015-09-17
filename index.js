@@ -8,6 +8,18 @@ var marked = require('marked');
 
 var app = express();
 
+// Creating blogs and uploads directories
+mkdirp('./blogs', function (e) {
+	if (e) {
+		console.log("Directory Already Exists.....!!!");
+	}
+});
+mkdirp('./uploads', function (e) {
+	if (e) {
+		console.log("Directory Already Exists.....!!!");
+	}
+});
+
 // Exposing Blogs
 app.use(express.static('./blogs'));
 
