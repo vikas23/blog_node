@@ -5,6 +5,7 @@ var fs = require('fs');
 var jsonfile = require('jsonfile');
 var jsonConcat = require('json-concat');
 var marked = require('marked');
+var gm = require('gm').subClass({ imageMagick: true });
 
 var app = express();
 
@@ -106,6 +107,16 @@ app.post('/submitBlog', multipartMiddleware, function (req, res) {
 	var imgDest = './blogs/' + req.body.id + '/img/';
 	fs.createReadStream(req.files.imgsrc.path).pipe(fs.createWriteStream(imgDest + 'blogTitle.jpg'));
 	fs.createReadStream(req.files.authorImg.path).pipe(fs.createWriteStream(imgDest + 'authorImg.jpg'));
+
+	// Resizing Image Files
+	gm(imgDest + 'blogTitle.jpg')
+		.resize(848, 599, '!')
+		.write(imgDest + 'blogTitle.jpg', function () {
+		});
+	gm(imgDest + 'authorImg.jpg')
+		.resize(48, 48, '!')
+		.write(imgDest + 'authorImg.jpg', function () {
+		});
 
 	// Getting JSON Files
 	var file = './blogs/' + req.body.id + '/' + 'blog.json';
